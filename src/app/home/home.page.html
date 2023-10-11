@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Cálculo del índice de masa corporal </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    
+    <ion-label position="floating">Introduzca su altura (en metros)</ion-label>
+    <ion-input
+      [(ngModel)]="altura"
+      type="number"
+      placeholder="0.00 m"
+    ></ion-input>
+
+    <ion-label position="floating">Introduzca su peso (en kg)</ion-label>
+    <ion-input
+    [(ngModel)]="peso"
+    type="number"
+    placeholder="0 kg"
+  ></ion-input>
+
+    <ion-button color="secondary" (click)="calculoIMC()">Comprobar IMC</ion-button>
+    <br>
+    <ion-button color="warning" (click)="reiniciar()">Reiniciar</ion-button>
+    <h3>{{txtIMC}}</h3>
+    <h3>{{txtIMCIdeal}}</h3>
+    <h3>{{txtMensaje}}</h3>
+  </div>
+</ion-content>
