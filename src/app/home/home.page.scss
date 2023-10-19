@@ -26,7 +26,7 @@
   text-decoration: none;
 }
 
-//Pantallas pequeñas
+//Pantallas pequeñas. Cambia el fondo a azul
 @media (max-width: 600px) {
   #container {
     font-size: 30px;
@@ -34,7 +34,7 @@
   }
 }
 
-//Pantallas medianas
+//Pantallas medianas. Cambia el fondo a rojo
 @media (min-width: 601px) and (max-width: 800px) {
   #container {
     font-size: 20px;
@@ -42,10 +42,35 @@
   }
 }
 
-//Pantallas grandes
+//Pantallas grandes. Cambia el fondo a morado
 @media (min-width: 801px) {
   #container {
     font-size: 18px;
     background-color: #db50b9;
+  }
+}
+
+
+//Pantalla en horizontal. Hace que los botones ocupen todo el ancho de la pantalla
+@media (orientation: landscape) {
+  ion-button.full-width {
+    width: 100%;
+  }
+}
+
+//Si la app está en modo horizontal, se elimina el botón de reinicio y se muestra otro
+ion-button#reiniciarAlto {
+
+  @media (orientation: landscape) {
+    display: none;
+  }
+}
+
+//Si la app está en modo vertical, se elimina el botón de reinicio y se muestra otro
+ion-button#reiniciarAncho {
+  display: none;
+
+  @media (orientation: landscape) {
+    display: block;
   }
 }
